@@ -17,7 +17,9 @@ class CreateVuelosTable extends Migration
             $table->timestamps();
             $table->string('codigo_vuelo')->nullable();
             $table->time('hdesp_vuelo')->nullable();
+            $table->string('aero_desp_vuelo')->nullable();
             $table->time('hater_vuelo')->nullable();
+            $table->string('aero_ater_vuelo')->nullable();
             $table->date('fecha_vuelo')->nullable();
             $table->integer('pocup_vuelo')->nullable();
             $table->integer('pvac_vuelo')->nullable();

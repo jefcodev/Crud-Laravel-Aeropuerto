@@ -4,10 +4,11 @@
     {!! $errors->first('placa_avi', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('capacidad_avi') ? 'has-error' : ''}}">
-    <label for="capacidad_avi" class="control-label">{{ 'Nombre Avion' }}</label>
-    <input class="form-control" name="capacidad_avi" type="number" id="capacidad_avi" value="{{ isset($avion->capacidad_avi) ? $avion->capacidad_avi : ''}}" >
+    <label for="capacidad_avi" class="control-label">{{ 'Capacidad' }}</label>
+    <input class="form-control" name="capacidad_avi" type="text" id="capacidad_avi" value="{{ isset($avion->capacidad_avi) ? $avion->capacidad_avi : ''}}" >
     {!! $errors->first('capacidad_avi', '<p class="help-block">:message</p>') !!}
 </div>
+
 <div class="form-group {{ $errors->has('fk_aerolinea_id_alinea') ? 'has-error' : ''}}">
     <label for="fk_aerolinea_id_alinea" class="control-label">{{ 'Aerolinea' }}</label>
     <input class="form-control" name="fk_aerolinea_id_alinea" type="text" id="fk_aerolinea_id_alinea" value="{{ isset($avion->fk_aerolinea_id_alinea) ? $avion->fk_aerolinea_id_alinea : ''}}" >

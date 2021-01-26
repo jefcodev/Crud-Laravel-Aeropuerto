@@ -14,8 +14,11 @@ class CreateAuditoriasTable extends Migration
     public function up()
     {
         Schema::create('auditorias', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('codigo_audi');
+            $table->integer('rol_audi');
+            $table->integer('fk_user_id_user');
+            $table->integer('fk_vuelo_id_vuelo');
         });
     }
 

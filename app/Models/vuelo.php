@@ -25,7 +25,7 @@ class vuelo extends Model
      *
      * @var array
      */
-    protected $fillable = ['codigo_vuelo', 'hdesp_vuelo', 'hater_vuelo', 'fecha_vuelo', 'pocup_vuelo', 'pvac_vuelo', 'escala_vuelo', 'fk_avion_id_avi'];
+    protected $fillable = ['codigo_vuelo', 'hdesp_vuelo', 'aero_desp_vuelo', 'hater_vuelo', 'aero_ater_vuelo', 'fecha_vuelo', 'pocup_vuelo', 'pvac_vuelo', 'escala_vuelo', 'fk_avion_id_avi'];
 
     
 }

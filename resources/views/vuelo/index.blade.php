@@ -33,7 +33,9 @@
                                     <th>#</th>
                                     <th>Codigo Vuelo</th>
                                     <th>Hora Despegue</th>
+                                    <th>Aeropuerto  Despegue</th>
                                     <th>Hora Aterrizaje</th>
+                                    <th>Aeropuerto Aterrizaje</th>
                                     <th>Fecha Vuelo</th>
                                     <th>Plazas Ocupadas</th>
                                     <th>Plazas Vacias</th>
@@ -48,7 +50,9 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $item->codigo_vuelo }}</td>
                                     <td>{{ $item->hdesp_vuelo }}</td>
+                                    <td>{{ $item->aero_desp_vuelo }}</td>
                                     <td>{{ $item->hater_vuelo }}</td>
+                                    <td>{{ $item->aero_ater_vuelo }}</td>
                                     <td>{{ $item->fecha_vuelo }}</td>
                                     <td>{{ $item->pocup_vuelo }}</td>
                                     <td>{{ $item->pvac_vuelo }}</td>

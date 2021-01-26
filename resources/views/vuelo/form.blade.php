@@ -8,10 +8,21 @@
     <input class="form-control" name="hdesp_vuelo" type="time" id="hdesp_vuelo" value="{{ isset($vuelo->hdesp_vuelo) ? $vuelo->hdesp_vuelo : ''}}">
     {!! $errors->first('hdesp_vuelo', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group {{ $errors->has('aero_desp_vuelo') ? 'has-error' : ''}}">
+    <label for="aero_desp_vuelo" class="control-label">{{ 'Aeropuerto Despegue' }}</label>
+    <input class="form-control" name="aero_desp_vuelo" type="text" id="aero_desp_vuelo" value="{{ isset($avion->aero_desp_vuelo) ? $avion->aero_desp_vuelo : ''}}" >
+    {!! $errors->first('aero_desp_vuelo', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group {{ $errors->has('hater_vuelo') ? 'has-error' : ''}}">
     <label for="hater_vuelo" class="control-label">{{ 'Hora Aterrisaje' }}</label>
     <input class="form-control" name="hater_vuelo" type="time" id="hater_vuelo" value="{{ isset($vuelo->hater_vuelo) ? $vuelo->hater_vuelo : ''}}">
     {!! $errors->first('hater_vuelo', '<p class="help-block">:message</p>') !!}
+</div>
+
+<div class="form-group {{ $errors->has('aero_ater_vuelo') ? 'has-error' : ''}}">
+    <label for="aero_ater_vuelo" class="control-label">{{ 'Aeropuerto Aterrisaje' }}</label>
+    <input class="form-control" name="aero_ater_vuelo" type="text" id="aero_ater_vuelo" value="{{ isset($avion->aero_ater_vuelo) ? $avion->aero_ater_vuelo : ''}}" >
+    {!! $errors->first('aero_ater_vuelo', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('fecha_vuelo') ? 'has-error' : ''}}">
     <label for="fecha_vuelo" class="control-label">{{ 'Fecha Vuelo' }}</label>
