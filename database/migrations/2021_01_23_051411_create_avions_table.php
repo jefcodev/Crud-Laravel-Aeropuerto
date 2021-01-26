@@ -14,10 +14,10 @@ class CreateAvionsTable extends Migration
     {
         Schema::create('avions', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
-            $table->string('numero_placa')->nullable();
-            $table->string('nombre_avion')->nullable();
-            $table->integer('capacidad')->nullable();
+            $table->string('placa_avi')->nullable();
+            $table->integer('capacidad_avi')->nullable();
+            $table->integer('fk_aerolinea_id_alinea')->nullable();
+
             });
     }
 

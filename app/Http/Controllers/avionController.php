@@ -21,9 +21,9 @@ class avionController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $avion = avion::where('numero_placa', 'LIKE', "%$keyword%")
-                ->orWhere('nombre_avion', 'LIKE', "%$keyword%")
-                ->orWhere('capacidad', 'LIKE', "%$keyword%")
+            $avion = avion::where('placa_avi', 'LIKE', "%$keyword%")
+                ->orWhere('capacidad_avi', 'LIKE', "%$keyword%")
+                ->orWhere('fk_aerolinea_id_alinea', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $avion = avion::latest()->paginate($perPage);

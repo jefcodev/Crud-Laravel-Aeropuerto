@@ -21,12 +21,11 @@ class aeropuertoController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $aeropuerto = aeropuerto::where('codigo_aeropuerto', 'LIKE', "%$keyword%")
-                ->orWhere('nombre_aeropuerto', 'LIKE', "%$keyword%")
-                ->orWhere('ciudad_aeropuerto', 'LIKE', "%$keyword%")
-                ->orWhere('pais_aeropuerto', 'LIKE', "%$keyword%")
-                ->orWhere('hora_despegue', 'LIKE', "%$keyword%")
-                ->orWhere('hora_aterrizaje', 'LIKE', "%$keyword%")
+            $aeropuerto = aeropuerto::where('codigo_aero', 'LIKE', "%$keyword%")
+                ->orWhere('nombre_aero', 'LIKE', "%$keyword%")
+                ->orWhere('ciudad_aero', 'LIKE', "%$keyword%")
+                ->orWhere('pais_aero', 'LIKE', "%$keyword%")
+                
                 ->latest()->paginate($perPage);
         } else {
             $aeropuerto = aeropuerto::latest()->paginate($perPage);

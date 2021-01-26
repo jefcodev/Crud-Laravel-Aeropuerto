@@ -21,9 +21,9 @@ class aerolineaController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $aerolinea = aerolinea::where('codigo_aerolinea', 'LIKE', "%$keyword%")
-                ->orWhere('nombre_aerolinea', 'LIKE', "%$keyword%")
-                ->orWhere('pais_aerolinea', 'LIKE', "%$keyword%")
+            $aerolinea = aerolinea::where('codigo_alinea', 'LIKE', "%$keyword%")
+                ->orWhere('nombre_alinea', 'LIKE', "%$keyword%")
+                ->orWhere('pais_alinea', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $aerolinea = aerolinea::latest()->paginate($perPage);

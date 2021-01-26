@@ -14,10 +14,9 @@ class CreateAerolineasTable extends Migration
     {
         Schema::create('aerolineas', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
-            $table->string('codigo_aerolinea')->nullable();
-            $table->string('nombre_aerolinea')->nullable();
-            $table->string('pais_aerolinea')->nullable();
+            $table->string('codigo_alinea')->nullable();
+            $table->string('nombre_alinea')->nullable();
+            $table->string('pais_alinea')->nullable();
             });
     }
 

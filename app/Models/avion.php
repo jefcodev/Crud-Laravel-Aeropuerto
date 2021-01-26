@@ -25,7 +25,7 @@ class avion extends Model
      *
      * @var array
      */
-    protected $fillable = ['numero_placa', 'nombre_avion', 'capacidad'];
+    protected $fillable = ['placa_avi', 'capacidad_avi', 'fk_aerolinea_id_alinea'];
 
     
 }

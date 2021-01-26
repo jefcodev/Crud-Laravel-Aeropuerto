@@ -27,7 +27,7 @@
                                     <tr>
                                         <th>ID</th><td>{{ $aerolinea->id }}</td>
                                     </tr>
-                                    <tr><th> Codigo Aerolinea </th><td> {{ $aerolinea->codigo_aerolinea }} </td></tr><tr><th> Nombre Aerolinea </th><td> {{ $aerolinea->nombre_aerolinea }} </td></tr><tr><th> Pais Aerolinea </th><td> {{ $aerolinea->pais_aerolinea }} </td></tr>
+                                    <tr><th> Codigo Aerolinea </th><td> {{ $aerolinea->codigo_alinea }} </td></tr><tr><th> Nombre Aerolinea </th><td> {{ $aerolinea->nombre_alinea }} </td></tr><tr><th> Pais Aerolinea </th><td> {{ $aerolinea->pais_alinea }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

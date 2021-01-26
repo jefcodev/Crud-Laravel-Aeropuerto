@@ -25,7 +25,7 @@ class aeropuerto extends Model
      *
      * @var array
      */
-    protected $fillable = ['codigo_aeropuerto', 'nombre_aeropuerto', 'ciudad_aeropuerto', 'pais_aeropuerto', 'hora_despegue', 'hora_aterrizaje'];
+    protected $fillable = ['codigo_aero', 'nombre_aero', 'ciudad_aero', 'pais_aero'];
 
     
 }

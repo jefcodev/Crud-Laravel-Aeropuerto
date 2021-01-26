@@ -14,7 +14,6 @@ class CreateVuelosTable extends Migration
     {
         Schema::create('vuelos', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
             $table->string('codigo_vuelo')->nullable();
             $table->integer('plazas_vacias')->nullable();
             $table->integer('plazas_ocupadas')->nullable();

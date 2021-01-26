@@ -1,17 +1,17 @@
-<div class="form-group {{ $errors->has('numero_placa') ? 'has-error' : ''}}">
-    <label for="numero_placa" class="control-label">{{ 'Numero Placa' }}</label>
-    <input class="form-control" name="numero_placa" type="text" id="numero_placa" value="{{ isset($avion->numero_placa) ? $avion->numero_placa : ''}}" >
-    {!! $errors->first('numero_placa', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('placa_avi') ? 'has-error' : ''}}">
+    <label for="placa_avi" class="control-label">{{ 'Numero Placa' }}</label>
+    <input class="form-control" name="placa_avi" type="text" id="placa_avi" value="{{ isset($avion->placa_avi) ? $avion->placa_avi : ''}}" >
+    {!! $errors->first('placa_avi', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('nombre_avion') ? 'has-error' : ''}}">
-    <label for="nombre_avion" class="control-label">{{ 'Nombre Avion' }}</label>
-    <input class="form-control" name="nombre_avion" type="text" id="nombre_avion" value="{{ isset($avion->nombre_avion) ? $avion->nombre_avion : ''}}" >
-    {!! $errors->first('nombre_avion', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('capacidad_avi') ? 'has-error' : ''}}">
+    <label for="capacidad_avi" class="control-label">{{ 'Nombre Avion' }}</label>
+    <input class="form-control" name="capacidad_avi" type="number" id="capacidad_avi" value="{{ isset($avion->capacidad_avi) ? $avion->capacidad_avi : ''}}" >
+    {!! $errors->first('capacidad_avi', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('capacidad') ? 'has-error' : ''}}">
-    <label for="capacidad" class="control-label">{{ 'Capacidad' }}</label>
-    <input class="form-control" name="capacidad" type="number" id="capacidad" value="{{ isset($avion->capacidad) ? $avion->capacidad : ''}}" >
-    {!! $errors->first('capacidad', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('fk_aerolinea_id_alinea') ? 'has-error' : ''}}">
+    <label for="fk_aerolinea_id_alinea" class="control-label">{{ 'Aerolinea' }}</label>
+    <input class="form-control" name="fk_aerolinea_id_alinea" type="text" id="fk_aerolinea_id_alinea" value="{{ isset($avion->fk_aerolinea_id_alinea) ? $avion->fk_aerolinea_id_alinea : ''}}" >
+    {!! $errors->first('fk_aerolinea_id_alinea', '<p class="help-block">:message</p>') !!}
 </div>
 
 

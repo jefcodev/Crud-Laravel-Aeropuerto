@@ -15,12 +15,10 @@ class CreateAeropuertosTable extends Migration
         Schema::create('aeropuertos', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('codigo_aeropuerto')->nullable();
-            $table->string('nombre_aeropuerto')->nullable();
-            $table->string('ciudad_aeropuerto')->nullable();
-            $table->string('pais_aeropuerto')->nullable();
-            $table->timestamp('hora_despegue')->nullable();
-            $table->timestamp('hora_aterrizaje')->nullable();
+            $table->string('codigo_aero')->nullable();
+            $table->string('nombre_aero')->nullable();
+            $table->string('ciudad_aero')->nullable();
+            $table->string('pais_aero')->nullable();
             });
     }
 

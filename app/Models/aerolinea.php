@@ -25,7 +25,7 @@ class aerolinea extends Model
      *
      * @var array
      */
-    protected $fillable = ['codigo_aerolinea', 'nombre_aerolinea', 'pais_aerolinea'];
+    protected $fillable = ['codigo_alinea', 'nombre_alinea', 'pais_alinea'];
 
     
 }
