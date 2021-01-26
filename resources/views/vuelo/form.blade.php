@@ -1,35 +1,48 @@
 <div class="form-group {{ $errors->has('codigo_vuelo') ? 'has-error' : ''}}">
     <label for="codigo_vuelo" class="control-label">{{ 'Codigo Vuelo' }}</label>
-    <input class="form-control" name="codigo_vuelo" type="text" id="codigo_vuelo" value="{{ isset($vuelo->codigo_vuelo) ? $vuelo->codigo_vuelo : ''}}" >
+    <input class="form-control" name="codigo_vuelo" type="text" id="codigo_vuelo" value="{{ isset($vuelo->codigo_vuelo) ? $vuelo->codigo_vuelo : ''}}">
     {!! $errors->first('codigo_vuelo', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('plazas_vacias') ? 'has-error' : ''}}">
-    <label for="plazas_vacias" class="control-label">{{ 'Plazas Vacias' }}</label>
-    <input class="form-control" name="plazas_vacias" type="number" id="plazas_vacias" value="{{ isset($vuelo->plazas_vacias) ? $vuelo->plazas_vacias : ''}}" >
-    {!! $errors->first('plazas_vacias', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('hdesp_vuelo') ? 'has-error' : ''}}">
+    <label for="hdesp_vuelo" class="control-label">{{ 'Hora Despegue' }}</label>
+    <input class="form-control" name="hdesp_vuelo" type="time" id="hdesp_vuelo" value="{{ isset($vuelo->hdesp_vuelo) ? $vuelo->hdesp_vuelo : ''}}">
+    {!! $errors->first('hdesp_vuelo', '<p class="help-block">:message</p>') !!}
 </div>
-<div class="form-group {{ $errors->has('plazas_ocupadas') ? 'has-error' : ''}}">
-    <label for="plazas_ocupadas" class="control-label">{{ 'Plazas Ocupadas' }}</label>
-    <input class="form-control" name="plazas_ocupadas" type="number" id="plazas_ocupadas" value="{{ isset($vuelo->plazas_ocupadas) ? $vuelo->plazas_ocupadas : ''}}" >
-    {!! $errors->first('plazas_ocupadas', '<p class="help-block">:message</p>') !!}
-</div>
-<div class="form-group {{ $errors->has('vuelo_directo') ? 'has-error' : ''}}">
-    <label for="vuelo_directo" class="control-label">{{ 'Vuelo Directo' }}</label>
-    <input class="form-control" name="vuelo_directo" type="text" id="vuelo_directo" value="{{ isset($vuelo->vuelo_directo) ? $vuelo->vuelo_directo : ''}}" >
-    {!! $errors->first('vuelo_directo', '<p class="help-block">:message</p>') !!}
-</div>
-<div class="form-group {{ $errors->has('vuelo_escala') ? 'has-error' : ''}}">
-    <label for="vuelo_escala" class="control-label">{{ 'Vuelo Escala' }}</label>
-    <input class="form-control" name="vuelo_escala" type="text" id="vuelo_escala" value="{{ isset($vuelo->vuelo_escala) ? $vuelo->vuelo_escala : ''}}" >
-    {!! $errors->first('vuelo_escala', '<p class="help-block">:message</p>') !!}
+<div class="form-group {{ $errors->has('hater_vuelo') ? 'has-error' : ''}}">
+    <label for="hater_vuelo" class="control-label">{{ 'Hora Aterrisaje' }}</label>
+    <input class="form-control" name="hater_vuelo" type="time" id="hater_vuelo" value="{{ isset($vuelo->hater_vuelo) ? $vuelo->hater_vuelo : ''}}">
+    {!! $errors->first('hater_vuelo', '<p class="help-block">:message</p>') !!}
 </div>
 <div class="form-group {{ $errors->has('fecha_vuelo') ? 'has-error' : ''}}">
     <label for="fecha_vuelo" class="control-label">{{ 'Fecha Vuelo' }}</label>
-    <input class="form-control" name="fecha_vuelo" type="datetime-local" id="fecha_vuelo" value="{{ isset($vuelo->fecha_vuelo) ? $vuelo->fecha_vuelo : ''}}" >
+    <input class="form-control" name="fecha_vuelo" type="date" id="fecha_vuelo" value="{{ isset($vuelo->fecha_vuelo) ? $vuelo->fecha_vuelo : ''}}">
     {!! $errors->first('fecha_vuelo', '<p class="help-block">:message</p>') !!}
 </div>
+<div class="form-group {{ $errors->has('pocup_vuelo') ? 'has-error' : ''}}">
+    <label for="pocup_vuelo" class="control-label">{{ 'Plasa Ocupada' }}</label>
+    <input class="form-control" name="pocup_vuelo" type="number" id="pocup_vuelo" value="{{ isset($vuelo->pocup_vuelo) ? $vuelo->pocup_vuelo : ''}}">
+    {!! $errors->first('pocup_vuelo', '<p class="help-block">:message</p>') !!}
+</div>
+<div class="form-group {{ $errors->has('pvac_vuelo') ? 'has-error' : ''}}">
+    <label for="pvac_vuelo" class="control-label">{{ 'Plaza Vacia' }}</label>
+    <input class="form-control" name="pvac_vuelo" type="number" id="pvac_vuelo" value="{{ isset($vuelo->pvac_vuelo) ? $vuelo->pvac_vuelo : ''}}">
+    {!! $errors->first('pvac_vuelo', '<p class="help-block">:message</p>') !!}
+</div>
 
+<div class="form-group {{ $errors->has('escala_vuelo') ? 'has-error' : ''}}">
+    <label for="escala_vuelo" class="control-label">{{ 'Escala' }}</label>
+    <select class="form-control" id="escala_vuelo" name="escala_vuelo" >
+        <option value="SI">SI</option>
+        <option value="NO">NO</option>
+    </select>
+    {!! $errors->first('escala_vuelo', '<p class="help-block">:message</p>') !!}
+</div>
 
+<div class="form-group {{ $errors->has('fk_avion_id_avi') ? 'has-error' : ''}}">
+    <label for="fk_avion_id_avi" class="control-label">{{ 'Avion' }}</label>
+    <input class="form-control" name="fk_avion_id_avi" type="text" id="fk_avion_id_avi" value="{{ isset($vuelo->fk_avion_id_avi) ? $vuelo->fk_avion_id_avi : ''}}">
+    {!! $errors->first('fk_avion_id_avi', '<p class="help-block">:message</p>') !!}
+</div>
 <div class="form-group">
-    <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
+    <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Actualizar' : 'Create' }}">
 </div>

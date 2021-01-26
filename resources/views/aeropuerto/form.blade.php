@@ -18,10 +18,6 @@
     <input class="form-control" name="pais_aero" type="text" id="pais_aero" value="{{ isset($aeropuerto->pais_aero) ? $aeropuerto->pais_aero : ''}}">
     {!! $errors->first('pais_aero', '<p class="help-block">:message</p>') !!}
 </div>
-
-
-
-
 <div class="form-group">
     <input class="btn btn-primary" type="submit" value="{{ $formMode === 'edit' ? 'Update' : 'Create' }}">
 </div>

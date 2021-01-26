@@ -14,13 +14,16 @@ class CreateVuelosTable extends Migration
     {
         Schema::create('vuelos', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
             $table->string('codigo_vuelo')->nullable();
-            $table->integer('plazas_vacias')->nullable();
-            $table->integer('plazas_ocupadas')->nullable();
-            $table->string('vuelo_directo')->nullable();
-            $table->string('vuelo_escala')->nullable();
-            $table->timestamp('fecha_vuelo')->nullable();
-            });
+            $table->time('hdesp_vuelo')->nullable();
+            $table->time('hater_vuelo')->nullable();
+            $table->date('fecha_vuelo')->nullable();
+            $table->integer('pocup_vuelo')->nullable();
+            $table->integer('pvac_vuelo')->nullable();
+            $table->string('escala_vuelo')->nullable();
+            $table->integer('fk_avion_id_avi')->nullable();
+        });
     }
 
     /**

@@ -22,11 +22,13 @@ class vueloController extends Controller
 
         if (!empty($keyword)) {
             $vuelo = vuelo::where('codigo_vuelo', 'LIKE', "%$keyword%")
-                ->orWhere('plazas_vacias', 'LIKE', "%$keyword%")
-                ->orWhere('plazas_ocupadas', 'LIKE', "%$keyword%")
-                ->orWhere('vuelo_directo', 'LIKE', "%$keyword%")
-                ->orWhere('vuelo_escala', 'LIKE', "%$keyword%")
+                ->orWhere('hdesp_vuelo', 'LIKE', "%$keyword%")
+                ->orWhere('hater_vuelo', 'LIKE', "%$keyword%")
                 ->orWhere('fecha_vuelo', 'LIKE', "%$keyword%")
+                ->orWhere('pocup_vuelo', 'LIKE', "%$keyword%")
+                ->orWhere('pvac_vuelo', 'LIKE', "%$keyword%")
+                ->orWhere('escala_vuelo', 'LIKE', "%$keyword%")
+                ->orWhere('fk_avion_id_avi', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $vuelo = vuelo::latest()->paginate($perPage);
