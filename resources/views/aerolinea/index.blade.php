@@ -13,16 +13,7 @@
                         <i class="fa fa-plus" aria-hidden="true"></i> Crear Nuevo
                     </a>
 
-                    <form method="GET" action="{{ url('/aerolinea') }}" accept-charset="UTF-8" class="form-inline my-2 my-lg-0 float-right" role="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control" name="search" placeholder="Search..." value="{{ request('search') }}">
-                            <span class="input-group-append">
-                                <button class="btn btn-secondary" type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </form>
+                    
 
                     <br />
                     <br />
@@ -51,7 +42,7 @@
                                         <form method="POST" action="{{ url('/aerolinea' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                             {{ method_field('DELETE') }}
                                             {{ csrf_field() }}
-                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete aerolinea" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</button>
+                                            <button type="submit" class="btn btn-danger btn-sm" title="Delete aerolinea" onclick="return confirm(&quot; Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</button>
                                         </form>
                                     </td>
                                 </tr>
